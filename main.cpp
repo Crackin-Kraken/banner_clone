@@ -4,440 +4,314 @@
 
 const int letter_height = 7;
 
+std::map<char, int> letters = {
+	{'A',  0},
+	{'B',  1},
+	{'C',  2},
+	{'D',  3},
+	{'E',  4},
+	{'F',  5},
+	{'G',  6},
+	{'H',  7},
+	{'I',  8},
+	{'J',  9},
+	{'K', 10},
+	{'L', 11},
+	{'M', 12},
+	{'N', 13},
+	{'O', 14},
+	{'P', 15},
+	{'Q', 16},
+	{'R', 17},
+	{'S', 18},
+	{'T', 19},
+	{'U', 20},
+	{'V', 21},
+	{'W', 22},
+	{'X', 23},
+	{'Y', 24},
+	{'Z', 25},
+	{' ', 26}
+};
+
+std::string lines[28];
+std::string* alphabet[27][letter_height];
+
+
 int main()
 {
-	std::map<char, int> letters = {
-		{'A',  0},
-		{'B',  1},
-		{'C',  2},
-		{'D',  3},
-		{'E',  4},
-		{'F',  5},
-		{'G',  6},
-		{'H',  7},
-		{'I',  8},
-		{'J',  9},
-		{'K', 10},
-		{'L', 11},
-		{'M', 12},
-		{'N', 13},
-		{'O', 14},
-		{'P', 15},
-		{'Q', 16},
-		{'R', 17},
-		{'S', 18},
-		{'T', 19},
-		{'U', 20},
-		{'V', 21},
-		{'W', 22},
-		{'X', 23},
-		{'Y', 24},
-		{'Z', 25},
-		{' ', 26}
-	};
-	std::string alphabet[27][letter_height];
+	lines[0] = "   #   ";
+	lines[1] = "  # #  ";
+	lines[2] = " #   # ";
+	lines[3] = "#     #";
+	lines[4] = "#######";
+	lines[5] = "###### ";
+	lines[6] = " ##### ";
+	lines[7] = "#      ";
+	lines[8] = "#####  ";
+	lines[9] = "#  ####";
+	lines[10] = "      #";
+	lines[11] = "#    # ";
+	lines[12] = "#   #  ";
+	lines[13] = "#  #   ";
+	lines[14] = "###    ";
+	lines[15] = "##   ##";
+	lines[16] = "# # # #";
+	lines[17] = "#  #  #";
+	lines[18] = "##    #";
+	lines[19] = "# #   #";
+	lines[20] = "#   # #";
+	lines[21] = "#    ##";
+	lines[22] = " #### #";
+	lines[23] = " ## ## ";
+	lines[24] = "     # ";
+	lines[25] = "    #  ";
+	lines[26] = "  #    ";
+	lines[27] = " #     ";
+	lines[28] = "       ";
 
+	//A
+	alphabet[0][0] = &lines[0];
+	alphabet[0][1] = &lines[1]; 
+	alphabet[0][2] = &lines[2];
+	alphabet[0][3] = &lines[3];
+	alphabet[0][4] = &lines[4];
+	alphabet[0][5] = &lines[3];
+	alphabet[0][6] = &lines[3];
 
-	//      #    
-	//     # #   
-	//    #   #  
-	//   #     # 
-	//   ####### 
-	//   #     # 
-	//   #     #
-	alphabet[0][0] = "   #   "; 
-	alphabet[0][1] = "  # #  "; 
-	alphabet[0][2] = " #   # ";
-	alphabet[0][3] = "#     #";
-	alphabet[0][4] = "#######";
-	alphabet[0][5] = "#     #";
-	alphabet[0][6] = "#     #";
+	//B
+	alphabet[1][0] = &lines[5];
+	alphabet[1][1] = &lines[3];
+	alphabet[1][2] = &lines[3];
+	alphabet[1][3] = &lines[5];
+	alphabet[1][4] = &lines[3];
+	alphabet[1][5] = &lines[3];
+	alphabet[1][6] = &lines[5];
 
-	//   ######  
-	//   #     # 
-	//   #     # 
-	//   ######  
-	//   #     # 
-	//   #     # 
-	//   ###### 
-	alphabet[1][0] = "###### ";
-	alphabet[1][1] = "#     #";
-	alphabet[1][2] = "#     #";
-	alphabet[1][3] = "###### ";
-	alphabet[1][4] = "#     #";
-	alphabet[1][5] = "#     #";
-	alphabet[1][6] = "###### ";
+	//C
+	alphabet[2][0] = &lines[6];
+	alphabet[2][1] = &lines[3];
+	alphabet[2][2] = &lines[7];
+	alphabet[2][3] = &lines[7];
+	alphabet[2][4] = &lines[7];
+	alphabet[2][5] = &lines[3];
+	alphabet[2][6] = &lines[6];
 
-	//    #####  
-	//   #     # 
-	//   #       
-	//   #       
-	//   #       
-	//   #     # 
-	//    ##### 
-	alphabet[2][0] = " ##### ";
-	alphabet[2][1] = "#     #";
-	alphabet[2][2] = "#      ";
-	alphabet[2][3] = "#      ";
-	alphabet[2][4] = "#      ";
-	alphabet[2][5] = "#     #";
-	alphabet[2][6] = " ##### ";
+	//D
+	alphabet[3][0] = &lines[5];
+	alphabet[3][1] = &lines[3];
+	alphabet[3][2] = &lines[3];
+	alphabet[3][3] = &lines[3];
+	alphabet[3][4] = &lines[3];
+	alphabet[3][5] = &lines[3];
+	alphabet[3][6] = &lines[5];
 
-	//   ######  
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   ###### 
-	alphabet[3][0] = "###### ";
-	alphabet[3][1] = "#     #";
-	alphabet[3][2] = "#     #";
-	alphabet[3][3] = "#     #";
-	alphabet[3][4] = "#     #";
-	alphabet[3][5] = "#     #";
-	alphabet[3][6] = "###### ";
+	//E
+	alphabet[4][0] = &lines[4];
+	alphabet[4][1] = &lines[7];
+	alphabet[4][2] = &lines[7];
+	alphabet[4][3] = &lines[8];
+	alphabet[4][4] = &lines[7];
+	alphabet[4][5] = &lines[7];
+	alphabet[4][6] = &lines[4];
 
-	//   ####### 
-	//   #       
-	//   #       
-	//   #####   
-	//   #       
-	//   #       
-	//   ####### 
-	alphabet[4][0] = "#######";
-	alphabet[4][1] = "#      ";
-	alphabet[4][2] = "#      ";
-	alphabet[4][3] = "#####  ";
-	alphabet[4][4] = "#      ";
-	alphabet[4][5] = "#      ";
-	alphabet[4][6] = "#######";
+	//F
+	alphabet[5][0] = &lines[4];
+	alphabet[5][1] = &lines[7];
+	alphabet[5][2] = &lines[7];
+	alphabet[5][3] = &lines[8];
+	alphabet[5][4] = &lines[7];
+	alphabet[5][5] = &lines[7];
+	alphabet[5][6] = &lines[7];
 
-	//   ####### 
-	//   #       
-	//   #       
-	//   #####   
-	//   #       
-	//   #       
-	//   #       
-	alphabet[5][0] = "#######";
-	alphabet[5][1] = "#      ";
-	alphabet[5][2] = "#      ";
-	alphabet[5][3] = "#####  ";
-	alphabet[5][4] = "#      ";
-	alphabet[5][5] = "#      ";
-	alphabet[5][6] = "#      ";
+	//G
+	alphabet[6][0] = &lines[6];
+	alphabet[6][1] = &lines[3];
+	alphabet[6][2] = &lines[7];
+	alphabet[6][3] = &lines[9];
+	alphabet[6][4] = &lines[3];
+	alphabet[6][5] = &lines[3];
+	alphabet[6][6] = &lines[6];
 
-	//    #####  
-	//   #     # 
-	//   #       
-	//   #  #### 
-	//   #     # 
-	//   #     # 
-	//    #####  
-	alphabet[6][0] = " ##### ";
-	alphabet[6][1] = "#     #";
-	alphabet[6][2] = "#      ";
-	alphabet[6][3] = "#  ####";
-	alphabet[6][4] = "#     #";
-	alphabet[6][5] = "#     #";
-	alphabet[6][6] = " ##### ";
+	//H
+	alphabet[7][0] = &lines[3];
+	alphabet[7][1] = &lines[3];
+	alphabet[7][2] = &lines[3];
+	alphabet[7][3] = &lines[4];
+	alphabet[7][4] = &lines[3];
+	alphabet[7][5] = &lines[3];
+	alphabet[7][6] = &lines[3];
 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   ####### 
-	//   #     # 
-	//   #     # 
-	//   #     #
-	alphabet[7][0] = "#     #";
-	alphabet[7][1] = "#     #";
-	alphabet[7][2] = "#     #";
-	alphabet[7][3] = "#######";
-	alphabet[7][4] = "#     #";
-	alphabet[7][5] = "#     #";
-	alphabet[7][6] = "#     #";
+	//I
+	alphabet[8][0] = &lines[4];
+	alphabet[8][1] = &lines[0];
+	alphabet[8][2] = &lines[0];
+	alphabet[8][3] = &lines[0];
+	alphabet[8][4] = &lines[0];
+	alphabet[8][5] = &lines[0];
+	alphabet[8][6] = &lines[4];
 
-	//   ### 
-	//    #  
-	//    #  
-	//    #  
-	//    #  
-	//    #  
-	//   ### 
-	alphabet[8][0] = "#######";
-	alphabet[8][1] = "   #   ";
-	alphabet[8][2] = "   #   ";
-	alphabet[8][3] = "   #   ";
-	alphabet[8][4] = "   #   ";
-	alphabet[8][5] = "   #   ";
-	alphabet[8][6] = "#######";
+	//J
+	alphabet[9][0] = &lines[10];
+	alphabet[9][1] = &lines[10];
+	alphabet[9][2] = &lines[10];
+	alphabet[9][3] = &lines[10];
+	alphabet[9][4] = &lines[3];
+	alphabet[9][5] = &lines[3];
+	alphabet[9][6] = &lines[6];
 
-	//         # 
-	//         # 
-	//         # 
-	//         # 
-	//   #     # 
-	//   #     # 
-	//    ##### 
-	alphabet[9][0] = "      #";
-	alphabet[9][1] = "      #";
-	alphabet[9][2] = "      #";
-	alphabet[9][3] = "      #";
-	alphabet[9][4] = "#     #";
-	alphabet[9][5] = "#     #";
-	alphabet[9][6] = " ##### ";
+	//K
+	alphabet[10][0] = &lines[11];
+	alphabet[10][1] = &lines[12];
+	alphabet[10][2] = &lines[13];
+	alphabet[10][3] = &lines[14];
+	alphabet[10][4] = &lines[13];
+	alphabet[10][5] = &lines[12];
+	alphabet[10][6] = &lines[11];
 
-	//   #    #  
-	//   #   #   
-	//   #  #    
-	//   ###     
-	//   #  #    
-	//   #   #   
-	//   #    #  
-	alphabet[10][0] = "#    # ";
-	alphabet[10][1] = "#   #  ";
-	alphabet[10][2] = "#  #   ";
-	alphabet[10][3] = "###    ";
-	alphabet[10][4] = "#  #   ";
-	alphabet[10][5] = "#   #  ";
-	alphabet[10][6] = "#    # ";
+	//L
+	alphabet[11][0] = &lines[7];
+	alphabet[11][1] = &lines[7];
+	alphabet[11][2] = &lines[7];
+	alphabet[11][3] = &lines[7];
+	alphabet[11][4] = &lines[7];
+	alphabet[11][5] = &lines[7];
+	alphabet[11][6] = &lines[4];
 
-	//   #       
-	//   #       
-	//   #       
-	//   #       
-	//   #       
-	//   #       
-	//   ####### 
-	alphabet[11][0] = "#      ";
-	alphabet[11][1] = "#      ";
-	alphabet[11][2] = "#      ";
-	alphabet[11][3] = "#      ";
-	alphabet[11][4] = "#      ";
-	alphabet[11][5] = "#      ";
-	alphabet[11][6] = "#######";
+	//M
+	alphabet[12][0] = &lines[3];
+	alphabet[12][1] = &lines[15];
+	alphabet[12][2] = &lines[16];
+	alphabet[12][3] = &lines[17];
+	alphabet[12][4] = &lines[3];
+	alphabet[12][5] = &lines[3];
+	alphabet[12][6] = &lines[3];  
 
-	//   #     # 
-	//   ##   ## 
-	//   # # # # 
-	//   #  #  # 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	alphabet[12][0] = "#     #";
-	alphabet[12][1] = "##   ##";
-	alphabet[12][2] = "# # # #";
-	alphabet[12][3] = "#  #  #";
-	alphabet[12][4] = "#     #";
-	alphabet[12][5] = "#     #";
-	alphabet[12][6] = "#     #";  
+	//N
+	alphabet[13][0] = &lines[3];
+	alphabet[13][1] = &lines[18];
+	alphabet[13][2] = &lines[19];
+	alphabet[13][3] = &lines[17];
+	alphabet[13][4] = &lines[20];
+	alphabet[13][5] = &lines[21];
+	alphabet[13][6] = &lines[3];
 
-	//   #     # 
-	//   ##    # 
-	//   # #   # 
-	//   #  #  # 
-	//   #   # # 
-	//   #    ## 
-	//   #     # 
-	alphabet[13][0] = "#     #";
-	alphabet[13][1] = "##    #";
-	alphabet[13][2] = "# #   #";
-	alphabet[13][3] = "#  #  #";
-	alphabet[13][4] = "#   # #";
-	alphabet[13][5] = "#    ##";
-	alphabet[13][6] = "#     #";
+	//O
+	alphabet[14][0] = &lines[6];
+	alphabet[14][1] = &lines[3];
+	alphabet[14][2] = &lines[3];
+	alphabet[14][3] = &lines[3];
+	alphabet[14][4] = &lines[3];
+	alphabet[14][5] = &lines[3];
+	alphabet[14][6] = &lines[6];
 
-	//   ####### 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   ####### 
-	alphabet[14][0] = " ##### ";
-	alphabet[14][1] = "#     #";
-	alphabet[14][2] = "#     #";
-	alphabet[14][3] = "#     #";
-	alphabet[14][4] = "#     #";
-	alphabet[14][5] = "#     #";
-	alphabet[14][6] = " ##### ";
+	//P
+	alphabet[15][0] = &lines[5];
+	alphabet[15][1] = &lines[3];
+	alphabet[15][2] = &lines[3];
+	alphabet[15][3] = &lines[5];
+	alphabet[15][4] = &lines[7];
+	alphabet[15][5] = &lines[7];
+	alphabet[15][6] = &lines[7];
 
-	//   ######  
-	//   #     # 
-	//   #     # 
-	//   ######  
-	//   #       
-	//   #       
-	//   #       
-	alphabet[15][0] = "###### ";
-	alphabet[15][1] = "#     #";
-	alphabet[15][2] = "#     #";
-	alphabet[15][3] = "###### ";
-	alphabet[15][4] = "#      ";
-	alphabet[15][5] = "#      ";
-	alphabet[15][6] = "#      ";
+	//Q
+	alphabet[16][0] = &lines[6];
+	alphabet[16][1] = &lines[3];
+	alphabet[16][2] = &lines[3];
+	alphabet[16][3] = &lines[3];
+	alphabet[16][4] = &lines[20];
+	alphabet[16][5] = &lines[11];
+	alphabet[16][6] = &lines[22];
 
-	//    #####  
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   #   # # 
-	//   #    #  
-	//    #### # 
-	alphabet[16][0] = " ##### ";
-	alphabet[16][1] = "#     #";
-	alphabet[16][2] = "#     #";
-	alphabet[16][3] = "#     #";
-	alphabet[16][4] = "#   # #";
-	alphabet[16][5] = "#    # ";
-	alphabet[16][6] = " #### #";
+	//R
+	alphabet[17][0] = &lines[5];
+	alphabet[17][1] = &lines[3];
+	alphabet[17][2] = &lines[3];
+	alphabet[17][3] = &lines[5];
+	alphabet[17][4] = &lines[12];
+	alphabet[17][5] = &lines[11];
+	alphabet[17][6] = &lines[3];
 
-	//   ######  
-	//   #     # 
-	//   #     # 
-	//   ######  
-	//   #   #   
-	//   #    #  
-	//   #     # 
-	alphabet[17][0] = "###### ";
-	alphabet[17][1] = "#     #";
-	alphabet[17][2] = "#     #";
-	alphabet[17][3] = "###### ";
-	alphabet[17][4] = "#   #  ";
-	alphabet[17][5] = "#    # ";
-	alphabet[17][6] = "#     #";
+	//S
+	alphabet[18][0] = &lines[6];
+	alphabet[18][1] = &lines[3];
+	alphabet[18][2] = &lines[7];
+	alphabet[18][3] = &lines[6];
+	alphabet[18][4] = &lines[10];
+	alphabet[18][5] = &lines[3];
+	alphabet[18][6] = &lines[6];
 
-	//    #####  
-	//   #     # 
-	//   #       
-	//    #####  
-	//         # 
-	//   #     # 
-	//    #####  
-	alphabet[18][0] = " ##### ";
-	alphabet[18][1] = "#     #";
-	alphabet[18][2] = "#      ";
-	alphabet[18][3] = " ##### ";
-	alphabet[18][4] = "      #";
-	alphabet[18][5] = "#     #";
-	alphabet[18][6] = " ##### ";
+	//T
+	alphabet[19][0] = &lines[4];
+	alphabet[19][1] = &lines[0];
+	alphabet[19][2] = &lines[0];
+	alphabet[19][3] = &lines[0];
+	alphabet[19][4] = &lines[0];
+	alphabet[19][5] = &lines[0];
+	alphabet[19][6] = &lines[0];
 
-	//   ####### 
-	//      #    
-	//      #    
-	//      #    
-	//      #    
-	//      #    
-	//      #    
-	alphabet[19][0] = "#######";
-	alphabet[19][1] = "   #   ";
-	alphabet[19][2] = "   #   ";
-	alphabet[19][3] = "   #   ";
-	alphabet[19][4] = "   #   ";
-	alphabet[19][5] = "   #   ";
-	alphabet[19][6] = "   #   ";
+	//U
+	alphabet[20][0] = &lines[3];
+	alphabet[20][1] = &lines[3];
+	alphabet[20][2] = &lines[3];
+	alphabet[20][3] = &lines[3];
+	alphabet[20][4] = &lines[3];
+	alphabet[20][5] = &lines[3];
+	alphabet[20][6] = &lines[6];
 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//    #####  
-	alphabet[20][0] = "#     #";
-	alphabet[20][1] = "#     #";
-	alphabet[20][2] = "#     #";
-	alphabet[20][3] = "#     #";
-	alphabet[20][4] = "#     #";
-	alphabet[20][5] = "#     #";
-	alphabet[20][6] = " ##### ";
+	//V
+	alphabet[21][0] = &lines[3];
+	alphabet[21][1] = &lines[3];
+	alphabet[21][2] = &lines[3];
+	alphabet[21][3] = &lines[3];
+	alphabet[21][4] = &lines[2];
+	alphabet[21][5] = &lines[1];
+	alphabet[21][6] = &lines[0];
 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//   #     # 
-	//    #   #  
-	//     # #   
-	//      #    
-	alphabet[21][0] = "#     #";
-	alphabet[21][1] = "#     #";
-	alphabet[21][2] = "#     #";
-	alphabet[21][3] = "#     #";
-	alphabet[21][4] = " #   # ";
-	alphabet[21][5] = "  # #  ";
-	alphabet[21][6] = "   #   ";
+	//W
+	alphabet[22][0] = &lines[3];
+	alphabet[22][1] = &lines[17];
+	alphabet[22][2] = &lines[17];
+	alphabet[22][3] = &lines[17];
+	alphabet[22][4] = &lines[17];
+	alphabet[22][5] = &lines[17];
+	alphabet[22][6] = &lines[23];
 
-	//   #     # 
-	//   #  #  # 
-	//   #  #  # 
-	//   #  #  # 
-	//   #  #  # 
-	//   #  #  # 
-	//    ## ##  
-	alphabet[22][0] = "#     #";
-	alphabet[22][1] = "#  #  #";
-	alphabet[22][2] = "#  #  #";
-	alphabet[22][3] = "#  #  #";
-	alphabet[22][4] = "#  #  #";
-	alphabet[22][5] = "#  #  #";
-	alphabet[22][6] = " ## ## ";
+	//X
+	alphabet[23][0] = &lines[3];
+	alphabet[23][1] = &lines[2];
+	alphabet[23][2] = &lines[1];
+	alphabet[23][3] = &lines[0];
+	alphabet[23][4] = &lines[1];
+	alphabet[23][5] = &lines[2];
+	alphabet[23][6] = &lines[3];
 
-	//   #     # 
-	//    #   #  
-	//     # #   
-	//      #    
-	//     # #   
-	//    #   #  
-	//   #     # 
-	alphabet[23][0] = "#     #";
-	alphabet[23][1] = " #   # ";
-	alphabet[23][2] = "  # #  ";
-	alphabet[23][3] = "   #   ";
-	alphabet[23][4] = "  # #  ";
-	alphabet[23][5] = " #   # ";
-	alphabet[23][6] = "#     #";
+	///Y
+	alphabet[24][0] = &lines[3];
+	alphabet[24][1] = &lines[2];
+	alphabet[24][2] = &lines[1];
+	alphabet[24][3] = &lines[0];
+	alphabet[24][4] = &lines[0];
+	alphabet[24][5] = &lines[0];
+	alphabet[24][6] = &lines[0];
 
-	//   #     # 
-	//    #   #  
-	//     # #   
-	//      #    
-	//      #    
-	//      #    
-	//      #    
-	alphabet[24][0] = "#     #";
-	alphabet[24][1] = " #   # ";
-	alphabet[24][2] = "  # #  ";
-	alphabet[24][3] = "   #   ";
-	alphabet[24][4] = "   #   ";
-	alphabet[24][5] = "   #   ";
-	alphabet[24][6] = "   #   ";
-
-	//   ####### 
-	//        #  
-	//       #   
-	//      #    
-	//     #     
-	//    #      
-	//   #######
-	alphabet[25][0] = "#######";
-	alphabet[25][1] = "     # ";
-	alphabet[25][2] = "    #  ";
-	alphabet[25][3] = "   #   ";
-	alphabet[25][4] = "  #    ";
-	alphabet[25][5] = " #     ";
-	alphabet[25][6] = "#######";
+	//Z
+	alphabet[25][0] = &lines[4];
+	alphabet[25][1] = &lines[24];
+	alphabet[25][2] = &lines[25];
+	alphabet[25][3] = &lines[0];
+	alphabet[25][4] = &lines[26];
+	alphabet[25][5] = &lines[27];
+	alphabet[25][6] = &lines[4];
 
 	//SPACE
-	alphabet[26][0] = "       ";
-	alphabet[26][1] = "       ";
-	alphabet[26][2] = "       ";
-	alphabet[26][3] = "       ";
-	alphabet[26][4] = "       ";
-	alphabet[26][5] = "       ";
-	alphabet[26][6] = "       ";
-
-
+	alphabet[26][0] = &lines[28];
+	alphabet[26][1] = &lines[28];
+	alphabet[26][2] = &lines[28];
+	alphabet[26][3] = &lines[28];
+	alphabet[26][4] = &lines[28];
+	alphabet[26][5] = &lines[28];
+	alphabet[26][6] = &lines[28];
 
 	std::string text = "JAFFA";
 	std::string lines[7];
@@ -450,7 +324,7 @@ int main()
 		for(char& c : text)
 		{
 			c = toupper(c);
-			lines[i] += alphabet[letters[c]][i];
+			lines[i] += *alphabet[letters[c]][i];
 			lines[i] += " ";
 		}
 	}
