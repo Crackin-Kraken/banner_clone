@@ -4,7 +4,7 @@
 
 const int letter_height = 7;
 
-std::map<char, int> letters = {
+std::map<char, int> character_map = {
 	{'A',  0},
 	{'B',  1},
 	{'C',  2},
@@ -31,7 +31,17 @@ std::map<char, int> letters = {
 	{'X', 23},
 	{'Y', 24},
 	{'Z', 25},
-	{' ', 26}
+	{' ', 26},
+	{'0', 27},
+	{'1', 28},
+	{'2', 29},
+	{'3', 30},
+	{'4', 31},
+	{'5', 32},
+	{'6', 33},
+	{'7', 34},
+	{'8', 35},
+	{'9', 36}
 };
 
 std::string lines[28];
@@ -324,7 +334,7 @@ int main()
 		for(char& c : text)
 		{
 			c = toupper(c);
-			lines[i] += *alphabet[letters[c]][i];
+			lines[i] += *alphabet[character_map[c]][i];
 			lines[i] += " ";
 		}
 	}
