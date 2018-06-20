@@ -44,8 +44,8 @@ std::map<char, int> character_map = {
 	{'9', 36}
 };
 
-std::string lines[28];
-std::string* characters[27][letter_height];
+std::string lines[33];
+std::string* characters[37][letter_height];
 
 
 int main()
@@ -79,6 +79,11 @@ int main()
 	lines[26] = "  #    ";
 	lines[27] = " #     ";
 	lines[28] = "       ";
+	lines[29] = "  ###  ";
+	lines[30] = "  ##   ";
+	lines[31] = " # #   ";
+	lines[32] = "    ## ";
+	lines[33] = "   ### ";
 
 	//A
 	characters[0][0] = &lines[0];
@@ -330,7 +335,41 @@ int main()
 //   #     #   #     ##          # #######       # #     #      #  #     #       # 
 //    #   #    #    #      #     #      #  #     # #     #     #   #     # #     # 
 //     ###   ##### #######  #####       #   #####   #####      #    #####   ##### 
+	//0
+	characters[27][0] = &lines[29];
+	characters[27][1] = &lines[2];
+	characters[27][2] = &lines[3];
+	characters[27][3] = &lines[3];
+	characters[27][4] = &lines[3];
+	characters[27][5] = &lines[2];
+	characters[27][6] = &lines[29];
+
 	//1
+	characters[28][0] = &lines[0];
+	characters[28][1] = &lines[30];
+	characters[28][2] = &lines[31];
+	characters[28][3] = &lines[0];
+	characters[28][4] = &lines[0];
+	characters[28][5] = &lines[0];
+	characters[28][6] = &lines[6];
+
+	//2
+	characters[29][0] = &lines[6];
+	characters[29][1] = &lines[3];
+	characters[29][2] = &lines[10];
+	characters[29][3] = &lines[32];
+	characters[29][4] = &lines[30];
+	characters[29][5] = &lines[27];
+	characters[29][6] = &lines[4];
+
+	//3
+	characters[30][0] = &lines[6];
+	characters[30][1] = &lines[3];
+	characters[30][2] = &lines[10];
+	characters[30][3] = &lines[33];
+	characters[30][4] = &lines[10];
+	characters[30][5] = &lines[3];
+	characters[30][6] = &lines[6];
 
 
 	std::string text = "JAFFA";
