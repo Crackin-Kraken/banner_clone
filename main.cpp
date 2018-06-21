@@ -44,7 +44,7 @@ std::map<char, int> character_map = {
 	{'9', 36}
 };
 
-std::string lines[33];
+std::string lines[37];
 std::string* characters[37][letter_height];
 
 
@@ -86,6 +86,7 @@ int main()
 	lines[33] = "   ### ";
 	lines[34] = "   # # ";
 	lines[35] = "  #  # ";
+	lines[36] = " ######";
 
 	//A
 	characters[0][0] = &lines[0];
@@ -383,49 +384,49 @@ int main()
 	characters[31][6] = &lines[24];
 
 	//5
-	characters[32][0] = &lines[];
-	characters[32][1] = &lines[];
-	characters[32][2] = &lines[];
-	characters[32][3] = &lines[];
-	characters[32][4] = &lines[];
-	characters[32][5] = &lines[];
-	characters[32][6] = &lines[];
+	characters[32][0] = &lines[4];
+	characters[32][1] = &lines[7];
+	characters[32][2] = &lines[7];
+	characters[32][3] = &lines[5];
+	characters[32][4] = &lines[10];
+	characters[32][5] = &lines[3];
+	characters[32][6] = &lines[6];
 
 	//6
-	characters[33][0] = &lines[];
-	characters[33][1] = &lines[];
-	characters[33][2] = &lines[];
-	characters[33][3] = &lines[];
-	characters[33][4] = &lines[];
-	characters[33][5] = &lines[];
-	characters[33][6] = &lines[];
+	characters[33][0] = &lines[6];
+	characters[33][1] = &lines[3];
+	characters[33][2] = &lines[7];
+	characters[33][3] = &lines[5];
+	characters[33][4] = &lines[3];
+	characters[33][5] = &lines[3];
+	characters[33][6] = &lines[6];
 
 	//7
-	characters[33][0] = &lines[];
-	characters[33][1] = &lines[];
-	characters[33][2] = &lines[];
-	characters[33][3] = &lines[];
-	characters[33][4] = &lines[];
-	characters[33][5] = &lines[];
-	characters[33][6] = &lines[];
+	characters[33][0] = &lines[4];
+	characters[33][1] = &lines[3];
+	characters[33][2] = &lines[10];
+	characters[33][3] = &lines[24];
+	characters[33][4] = &lines[24];
+	characters[33][5] = &lines[25];
+	characters[33][6] = &lines[25];
 
 	//8
-	characters[33][0] = &lines[];
-	characters[33][1] = &lines[];
-	characters[33][2] = &lines[];
-	characters[33][3] = &lines[];
-	characters[33][4] = &lines[];
-	characters[33][5] = &lines[];
-	characters[33][6] = &lines[];
+	characters[33][0] = &lines[6];
+	characters[33][1] = &lines[3];
+	characters[33][2] = &lines[3];
+	characters[33][3] = &lines[6];
+	characters[33][4] = &lines[3];
+	characters[33][5] = &lines[3];
+	characters[33][6] = &lines[6];
 
 	//9
-	characters[33][0] = &lines[];
-	characters[33][1] = &lines[];
-	characters[33][2] = &lines[];
-	characters[33][3] = &lines[];
-	characters[33][4] = &lines[];
-	characters[33][5] = &lines[];
-	characters[33][6] = &lines[];
+	characters[33][0] = &lines[6];
+	characters[33][1] = &lines[3];
+	characters[33][2] = &lines[3];
+	characters[33][3] = &lines[10];
+	characters[33][4] = &lines[36];
+	characters[33][5] = &lines[3];
+	characters[33][6] = &lines[6];
 
 	std::string text = "JAFFA";
 	std::string lines[7];
