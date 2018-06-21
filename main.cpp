@@ -84,6 +84,8 @@ int main()
 	lines[31] = " # #   ";
 	lines[32] = "    ## ";
 	lines[33] = "   ### ";
+	lines[34] = "   # # ";
+	lines[35] = "  #  # ";
 
 	//A
 	characters[0][0] = &lines[0];
@@ -371,6 +373,59 @@ int main()
 	characters[30][5] = &lines[3];
 	characters[30][6] = &lines[6];
 
+	//4
+	characters[31][0] = &lines[32];
+	characters[31][1] = &lines[34];
+	characters[31][2] = &lines[35];
+	characters[31][3] = &lines[2];
+	characters[31][4] = &lines[4];
+	characters[31][5] = &lines[24];
+	characters[31][6] = &lines[24];
+
+	//5
+	characters[32][0] = &lines[];
+	characters[32][1] = &lines[];
+	characters[32][2] = &lines[];
+	characters[32][3] = &lines[];
+	characters[32][4] = &lines[];
+	characters[32][5] = &lines[];
+	characters[32][6] = &lines[];
+
+	//6
+	characters[33][0] = &lines[];
+	characters[33][1] = &lines[];
+	characters[33][2] = &lines[];
+	characters[33][3] = &lines[];
+	characters[33][4] = &lines[];
+	characters[33][5] = &lines[];
+	characters[33][6] = &lines[];
+
+	//7
+	characters[33][0] = &lines[];
+	characters[33][1] = &lines[];
+	characters[33][2] = &lines[];
+	characters[33][3] = &lines[];
+	characters[33][4] = &lines[];
+	characters[33][5] = &lines[];
+	characters[33][6] = &lines[];
+
+	//8
+	characters[33][0] = &lines[];
+	characters[33][1] = &lines[];
+	characters[33][2] = &lines[];
+	characters[33][3] = &lines[];
+	characters[33][4] = &lines[];
+	characters[33][5] = &lines[];
+	characters[33][6] = &lines[];
+
+	//9
+	characters[33][0] = &lines[];
+	characters[33][1] = &lines[];
+	characters[33][2] = &lines[];
+	characters[33][3] = &lines[];
+	characters[33][4] = &lines[];
+	characters[33][5] = &lines[];
+	characters[33][6] = &lines[];
 
 	std::string text = "JAFFA";
 	std::string lines[7];
