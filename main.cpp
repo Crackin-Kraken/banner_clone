@@ -430,7 +430,8 @@ int main()
 	characters[33][6] = &lines[6];
 
 	std::string text = "JAFFA";
-	std::string lines[7];
+	std::string result[7];
+	std ::cout << getConsoleWidth() << "\n";
 	std::cout << "Enter your text: ";
 	std::getline(std::cin, text);
 	std::cout << "\n\n";
@@ -440,13 +441,13 @@ int main()
 		for(char& c : text)
 		{
 			c = toupper(c);
-			lines[i] += *characters[character_map[c]][i];
-			lines[i] += " ";
+			result[i] += *characters[character_map[c]][i];
+			result[i] += " ";
 		}
 	}
 	for(int i=0;i<letter_height;i++)
 	{
-		std::cout << lines[i] << "\n";
+		std::cout << result[i] << "\n";
 	}
 
 	std::cin.ignore();
