@@ -1,6 +1,8 @@
 #include <string>
 #include <iostream>
 #include <map>
+#include <vector>
+#include <algorithm>
 
 const int letter_height = 7;
 int getConsoleWidth();
@@ -429,25 +431,40 @@ int main()
 	characters[33][5] = &lines[3];
 	characters[33][6] = &lines[6];
 
-	std::string text = "JAFFA";
-	std::string result[7];
-	std ::cout << getConsoleWidth() << "\n";
+	std::vector<std::string> text;
+	text.resize(1);
+	std::vector<std::string> result;
 	std::cout << "Enter your text: ";
-	std::getline(std::cin, text);
+	std::getline(std::cin, text.at(0));
 	std::cout << "\n\n";
 
-	for(int i=0;i<letter_height;i++)
+	for(int i=0;i<text.size();i++)
 	{
-		for(char& c : text)
+		int num = (text.at(text.size() - 1).length() * 7) - getConsoleWidth();
+		if(num > 0 && num / 7 != 0)
 		{
-			c = toupper(c);
-			result[i] += *characters[character_map[c]][i];
-			result[i] += " ";
+			text.resize(text.size() + 1);
+			text.at(text.size() - 1) = text.at(text.size() - 2).substr(num / 7);
+			text.at(text.size() - 2).resize(num / 7);
 		}
 	}
-	for(int i=0;i<letter_height;i++)
+
+	for(int j=0;j<text.size();j++)
 	{
-		std::cout << result[i] << "\n";
+		for(int i=j*7;i<(j*7)+letter_height;i++)
+		{
+			result.resize(result.size() + 1);
+			for(char& c : text.at(j))
+			{
+				c = toupper(c);
+				result.at(i) += *characters[character_map[c]][i];
+				result.at(i) += " ";
+			}
+		}
+	}
+	for(int i=0;i<result.size();i++)
+	{
+		std::cout << result.at(i) << "\n";
 	}
 
 	std::cin.ignore();
