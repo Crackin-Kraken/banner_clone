@@ -3,6 +3,7 @@
 #include <map>
 
 const int letter_height = 7;
+int getConsoleWidth();
 
 std::map<char, int> character_map = {
 	{'A',  0},
